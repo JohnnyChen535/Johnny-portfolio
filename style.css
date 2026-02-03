@@ -1,10 +1,11 @@
 :root {
-  --white: #ffffff;
-  --rich-black: #00171f;
-  --prussian-blue: #003459;
-  --celadon-blue: #007ea7;
-  --vivid-sky-blue: #00a8e8;
+  --ink-black: #0D1321;
+  --deep-space-blue: #1D2D44;
+  --blue-slate: #3E5C76;
+  --dusty-denim: #748CAB;
+  --eggshell: #F0EBD8;
 }
+
 
 * {
   margin: 0;
