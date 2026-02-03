@@ -1,58 +1,46 @@
 document.addEventListener("DOMContentLoaded", () => {
   const translations = {
     en: {
-      siteName: "Johnny Chen",
-      navAbout: "About",
-      navProjects: "Projects",
-      navContact: "Contact",
-      heroGreeting: "Hello, I'm Johnny Chen",
-      heroSubtitle: "Web Developer • Designer • Creator",
-      aboutTitle: "About Me",
-      aboutText: "This is a short introduction about myself.",
+      siteName: "My Name",
+      heroTitle: "Hi, I'm [Your Name]",
+      heroDesc: "I build things for the web.",
+      btnProjects: "Projects",
+      btnContact: "Contact",
       projectsTitle: "Projects",
-      projectTitle: "Project Title",
-      projectDesc: "Short project description here.",
+      projectName: "Sample Project",
+      projectDesc: "A brief description.",
       contactTitle: "Contact",
-      githubLink: "GitHub: github.com/yourhandle",
-      footerText: "© 2026 Johnny Chen. All rights reserved.",
+      footerText: "© 2026 Your Name"
     },
     zh: {
-      siteName: "陈胜韬",
-      navAbout: "关于",
-      navProjects: "项目",
-      navContact: "联系",
-      heroGreeting: "你好，我是 陈胜韬",
-      heroSubtitle: "网页开发者 • 设计师 • 创作者",
-      aboutTitle: "关于我",
-      aboutText: "这是我的简短介绍。",
-      projectsTitle: "项目展示",
-      projectTitle: "项目标题",
-      projectDesc: "这里是项目简介。",
+      siteName: "我的名字",
+      heroTitle: "你好，我是 [你的名字]",
+      heroDesc: "我构建网页项目。",
+      btnProjects: "项目",
+      btnContact: "联系",
+      projectsTitle: "项目",
+      projectName: "示例项目",
+      projectDesc: "简短描述。",
       contactTitle: "联系我",
-      githubLink: "GitHub：github.com/yourhandle",
-      footerText: "© 2026 陈胜韬。保留所有权利。",
+      footerText: "© 2026 你的名字"
     }
   };
 
-  const langToggleBtn = document.getElementById("lang-toggle");
+  const btn = document.getElementById("lang-toggle");
   let currentLang = localStorage.getItem("lang") || "en";
 
-  function updateLanguage(lang) {
+  function updateLang(lang) {
     localStorage.setItem("lang", lang);
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (translations[lang][key]) {
-        el.textContent = translations[lang][key];
-      }
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      el.textContent = translations[lang][el.getAttribute("data-i18n")];
     });
-    langToggleBtn.textContent = lang === "en" ? "🇨🇳 中文" : "🇺🇸 English";
+    btn.textContent = lang === "en" ? "🇨🇳 中文" : "🇺🇸 English";
     currentLang = lang;
   }
 
-  langToggleBtn.addEventListener("click", () => {
-    const newLang = currentLang === "en" ? "zh" : "en";
-    updateLanguage(newLang);
+  btn.addEventListener("click", () => {
+    updateLang(currentLang === "en" ? "zh" : "en");
   });
 
-  updateLanguage(currentLang);
+  updateLang(currentLang);
 });
