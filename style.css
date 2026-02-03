@@ -1,9 +1,9 @@
 :root {
-  --ink-black: #0d1321;
-  --deep-space-blue: #1d2d44;
-  --blue-slate: #3e5c76;
-  --dusty-denim: #748cab;
-  --eggshell: #f0ebd8;
+  --white: #ffffff;
+  --rich-black: #00171f;
+  --prussian-blue: #003459;
+  --celadon-blue: #007ea7;
+  --vivid-sky-blue: #00a8e8;
 }
 
 * {
@@ -14,8 +14,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--ink-black);
-  color: var(--eggshell);
+  background: var(--rich-black);
+  color: var(--white);
   overflow-x: hidden;
 }
 
@@ -25,7 +25,7 @@ header {
   padding: 20px 40px;
   position: fixed;
   top: 0;
-  background: var(--deep-space-blue);
+  background: var(--prussian-blue);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,17 +35,21 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--eggshell);
+  color: var(--white);
   text-decoration: none;
 }
 
 #lang-toggle {
-  background: var(--blue-slate);
+  background: var(--celadon-blue);
   border: none;
   padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
-  color: var(--eggshell);
+  color: var(--white);
+}
+
+#lang-toggle:hover {
+  background: var(--vivid-sky-blue);
 }
 
 /* Hero */
@@ -61,12 +65,12 @@ header {
 
 .hero h1 {
   font-size: 3rem;
-  color: var(--eggshell);
+  color: var(--white);
 }
 
 .hero p {
   margin-top: 10px;
-  color: var(--dusty-denim);
+  color: var(--vivid-sky-blue);
 }
 
 .hero-buttons {
@@ -75,8 +79,8 @@ header {
 
 .btn {
   text-decoration: none;
-  background: var(--blue-slate);
-  color: var(--eggshell);
+  background: var(--celadon-blue);
+  color: var(--white);
   padding: 12px 24px;
   margin: 0 10px;
   border-radius: 8px;
@@ -84,7 +88,7 @@ header {
 }
 
 .btn:hover {
-  background: var(--dusty-denim);
+  background: var(--vivid-sky-blue);
 }
 
 /* Sections */
@@ -95,9 +99,9 @@ header {
 .projects h2,
 .contact h2 {
   font-size: 2rem;
-   margin-top: 40px;
+  margin-top: 40px; /* 空一行 */
   margin-bottom: 20px;
-  color: var(--eggshell);
+  color: var(--white);
 }
 
 .project-list {
@@ -107,11 +111,12 @@ header {
 }
 
 .project-card {
-  background: var(--deep-space-blue);
+  background: var(--prussian-blue);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   transition: 0.25s ease;
+  color: var(--white);
 }
 
 .project-card:hover {
@@ -122,6 +127,6 @@ header {
 footer {
   text-align: center;
   padding: 20px;
-  background: var(--deep-space-blue);
-  color: var(--dusty-denim);
+  background: var(--prussian-blue);
+  color: var(--vivid-sky-blue);
 }
