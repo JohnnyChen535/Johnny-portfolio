@@ -95,6 +95,7 @@ header {
 .projects h2,
 .contact h2 {
   font-size: 2rem;
+   margin-top: 40px;
   margin-bottom: 20px;
   color: var(--eggshell);
 }
