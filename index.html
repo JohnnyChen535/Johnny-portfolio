@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 data-i18n="siteName">My Name</h1>
+      <ul>
+        <li><a href="#about" data-i18n="navAbout">About</a></li>
+        <li><a href="#projects" data-i18n="navProjects">Projects</a></li>
+        <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+      </ul>
+      <button id="lang-toggle">🇨🇳 中文</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 data-i18n="heroGreeting">Hello, I'm [Your Name]</h2>
+    <p data-i18n="heroSubtitle">Web Developer • Designer • Creator</p>
+  </section>
+
+  <section id="about">
+    <h2 data-i18n="aboutTitle">About Me</h2>
+    <img src="assets/profile.jpg" alt="Profile" class="profile-pic" onerror="this.style.display='none'" />
+    <p data-i18n="aboutText">This is a short introduction about myself.</p>
+  </section>
+
+  <section id="projects">
+    <h2 data-i18n="projectsTitle">Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3 data-i18n="projectTitle">Project Title</h3>
+        <p data-i18n="projectDesc">Short project description here.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 data-i18n="contactTitle">Contact</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p data-i18n="githubLink">GitHub: github.com/yourhandle</p>
+  </section>
+
+  <footer>
+    <p data-i18n="footerText">© 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+  <!-- 确保 script 在 body 最底部加载 -->
+  <script src="script.js"></script>
+</body>
+</html>
