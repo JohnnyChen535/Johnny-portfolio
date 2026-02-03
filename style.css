@@ -1,11 +1,9 @@
 :root {
-  --ink-black: #0D1321;
-  --deep-space-blue: #1D2D44;
-  --blue-slate: #3E5C76;
-  --dusty-denim: #748CAB;
+  --ink-black: #000000;
+  --steel-blue: #002e6a;
+  --sky-glow: #F0EBD8;
   --eggshell: #F0EBD8;
 }
-
 
 * {
   margin: 0;
@@ -15,8 +13,9 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--rich-black);
-  color: var(--white);
+  background: var(--ink-black);
+  color: var(--eggshell);
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
@@ -26,7 +25,7 @@ header {
   padding: 20px 40px;
   position: fixed;
   top: 0;
-  background: var(--prussian-blue);
+  background: var(--steel-blue);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,21 +35,24 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--eggshell);
   text-decoration: none;
 }
 
 #lang-toggle {
-  background: var(--celadon-blue);
+  background: var(--sky-glow);
   border: none;
   padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
-  color: var(--white);
+  color: var(--ink-black);
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
 #lang-toggle:hover {
-  background: var(--vivid-sky-blue);
+  background: var(--eggshell);
+  color: var(--ink-black);
 }
 
 /* Hero */
@@ -59,19 +61,20 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 .hero h1 {
   font-size: 3rem;
-  color: var(--white);
+  margin-bottom: 10px;
+  color: var(--eggshell);
 }
 
 .hero p {
-  margin-top: 10px;
-  color: var(--vivid-sky-blue);
+  color: var(--sky-glow);
+  font-size: 1.2rem;
 }
 
 .hero-buttons {
@@ -79,30 +82,35 @@ header {
 }
 
 .btn {
-  text-decoration: none;
-  background: var(--celadon-blue);
-  color: var(--white);
+  background: var(--steel-blue);
+  color: var(--eggshell);
   padding: 12px 24px;
   margin: 0 10px;
   border-radius: 8px;
-  transition: background 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-  background: var(--vivid-sky-blue);
+  background: var(--sky-glow);
+  color: var(--ink-black);
 }
 
 /* Sections */
-.projects, .contact {
-  padding: 80px 40px;
+.projects,
+.contact {
+  padding: 100px 40px 60px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .projects h2,
 .contact h2 {
   font-size: 2rem;
-  margin-top: 40px; /* 空一行 */
-  margin-bottom: 20px;
-  color: var(--white);
+  margin-bottom: 30px;
+  margin-top: 60px;
+  color: var(--eggshell);
 }
 
 .project-list {
@@ -112,22 +120,66 @@ header {
 }
 
 .project-card {
-  background: var(--prussian-blue);
+  background: var(--steel-blue);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-  transition: 0.25s ease;
-  color: var(--white);
+  color: var(--eggshell);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
+  background: var(--sky-glow);
+  color: var(--ink-black);
+}
+
+.project-card a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contact */
+.contact p a {
+  color: var(--sky-glow);
+  text-decoration: none;
+}
+
+.contact p a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background: var(--prussian-blue);
-  color: var(--vivid-sky-blue);
+  padding: 30px;
+  background: var(--steel-blue);
+  color: var(--ink-black);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    display: block;
+    margin: 10px auto;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .projects,
+  .contact {
+    padding: 80px 20px;
+  }
 }
