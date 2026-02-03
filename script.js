@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const translations = {
     en: {
-      siteName: "My Name",
+      siteName: "Johnny Chen",
       navAbout: "About",
       navProjects: "Projects",
       navContact: "Contact",
-      heroGreeting: "Hello, I'm [Your Name]",
+      heroGreeting: "Hello, I'm Johnny Chen",
       heroSubtitle: "Web Developer • Designer • Creator",
       aboutTitle: "About Me",
       aboutText: "This is a short introduction about myself.",
@@ -14,14 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
       projectDesc: "Short project description here.",
       contactTitle: "Contact",
       githubLink: "GitHub: github.com/yourhandle",
-      footerText: "© 2026 Your Name. All rights reserved.",
+      footerText: "© 2026 Johnny Chen. All rights reserved.",
     },
     zh: {
-      siteName: "我的名字",
+      siteName: "陈胜韬",
       navAbout: "关于",
       navProjects: "项目",
       navContact: "联系",
-      heroGreeting: "你好，我是 [你的名字]",
+      heroGreeting: "你好，我是 陈胜韬",
       heroSubtitle: "网页开发者 • 设计师 • 创作者",
       aboutTitle: "关于我",
       aboutText: "这是我的简短介绍。",
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       projectDesc: "这里是项目简介。",
       contactTitle: "联系我",
       githubLink: "GitHub：github.com/yourhandle",
-      footerText: "© 2026 你的名字。保留所有权利。",
+      footerText: "© 2026 陈胜韬。保留所有权利。",
     }
   };
 
